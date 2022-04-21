@@ -1,7 +1,7 @@
 <?php
 
-$SERVER_NAME = "host.aurorastation.org";
-$SERVER_PORT = 1234;
+$SERVER_NAME = getenv("SS13_SERVER_NAME");
+$SERVER_PORT = intval(getenv("SS13_SERVER_PORT"));
 
 $CACHE_FILE = "./cache.json";
 $MAX_AGE = 60; // in seconds, 1 minute
@@ -94,7 +94,7 @@ if($currentCache === null || $currentCache["age"] + $MAX_AGE < time() )
 		http_response_code(500);
 		echo json_encode([
 			"statuscode" => 500,
-			"response" => "Server Error"
+			"response" => "Server Query Error"
 		]);
 	} else {
 		// TODO cache $res

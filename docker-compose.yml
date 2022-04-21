@@ -4,5 +4,10 @@ services:
     build: .
     image: aurora-landingpage
     restart: always
+    environment:
+        fpm.pool.clear_env: "no"
+        php.variables_order: "EGPCS"
+        SS13_SERVER_NAME: "host.aurorastation.org"
+        SS13_SERVER_PORT: "1234"
     ports:
       - 8086:80
