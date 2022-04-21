@@ -1,0 +1,8 @@
+version: "3"
+services:
+  aurora-landingpage:
+    build: .
+    image: aurora-landingpage
+    restart: always
+    ports:
+      - 8086:80

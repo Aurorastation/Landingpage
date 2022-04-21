@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Aurorastation - Index</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<style>
+			body {
+				background-image: url('images/Frontend_v4_background.png');
+				background-repeat: repeat-x;
+				background-color: #050615;
+			}
+			{# .container {
+				margin-top: 10%;
+				margin-left: auto;
+				margin-right: auto;
+			} #}
+			{# .image img {
+				display: block;
+				width: auto;
+				height: auto;
+			} #}
+			{# img.img-responsive {
+				-moz-transform: scale(1);
+				-webkit-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+				-webkit-transition: all 1s ease;
+				-moz-transition: all 1s ease;
+				-o-transition: all 1s ease;
+				transition: all 1s ease;
+			}
+			img.img-responsive:hover {
+				cursor: pointer;
+				-moz-transform: scale(1.05);
+				-webkit-transform: scale(1.05);
+				-o-transform: scale(1.05);
+				transform: scale(1.05);
+			} #}
+      .img-buttons img {
+        width: 100%;
+      }
+      [v-cloak] {
+        display: none;
+      }
+		</style>
+	</head>
+
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<div class="container">
+			<div class="row img-buttons mt-5">
+				<div class="col-sm col-6 my-2">
+					<a href="byond://server.aurorastation.org:1234">
+						<img src="images/Frontend_v4_BoardAurora.png" class="img-responsive" alt="Join the Server">
+					</a>
+				</div>
+				<div class="col-sm col-6 my-2">
+					<a href="https://forums.aurorastation.org/">
+						<img src="images/Frontend_v4_NTUplink.png" class="img-responsive" alt="Visit the Forums">
+					</a>
+				</div>
+				<div class="col-sm col-6 my-2">
+					<a href="https://wiki.aurorastation.org/">
+						<img src="images/Frontend_v4_QueryTerminal.png" class="img-responsive" alt="Visit the Wiki">
+					</a>
+				</div>
+				<div class="col-sm col-6 my-2">
+					<a href="https://byond.aurorastation.org/">
+						<img src="images/Frontend_v4_Personal.png" class="img-responsive" alt="Visit the Website">
+					</a>
+				</div>
+			</div>
+      <div class="row justify-content-center mt-3" id="status-app" v-cloak>
+        <div class="col-auto text-light">
+          <span>Round ID</span>
+          <p class="display-4">{{ sdata.gameid }}</p>
+        </div>
+        <div class="col-auto text-light">
+          <span>Mode</span>
+          <p class="display-4">{{ sdata.mode | capitalize }}</p>
+        </div>
+        <div class="col-auto text-light">
+          <span>Duration</span>
+          <p class="display-4">{{ sdata.roundduration }}</p>
+        </div>
+        <div class="col-auto text-light">
+          <span>Players</span>
+          <p class="display-4">{{ sdata.players }}</p>
+        </div> 
+        <div class="col-auto text-light">
+          <span>Staff</span>
+          <p class="display-4">{{ sdata.staff }}</p>
+        </div>
+        <div class="col-auto text-light">
+          <span>State</span>
+          <p class="display-4" v-if="sdata.transferring == null">----</p>
+          <p class="display-4" v-else-if="sdata.transferring">Transfering</p>
+          <p class="display-4" v-else>Ongoing</p>
+        </div>
+      </div>
+		</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+		<script>
+      var app = new Vue({
+        el: '#status-app',
+        data: {
+          sdata: {
+            gameid: '-------',
+            mode: '--',
+            roundduration: '--:--',
+            players: '--',
+            staff: '-',
+            transferring: null
+          },
+          timeoutid: null
+        },
+        mounted() {
+          this.updateData()
+        },
+        filters: {
+          capitalize: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            return value.charAt(0).toUpperCase() + value.slice(1)
+          }
+        },
+        methods: {
+          updateData() {
+            if(this.timeoutid == null)
+            {
+              this.timeoutid = setInterval(this.updateData, 1000*60)
+            }
+            axios
+              .post('/server_bridge.php', {
+                query: 'get_serverstatus'
+              })
+              .then((res) => {
+                this.sdata = res.data.data
+              })
+          }
+        }
+      })
+    </script>
+	</body>
+</html>
