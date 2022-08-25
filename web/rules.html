@@ -1,51 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Server Rules</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <style>
-  	body {
-  		background-image: url(images/Frontend_v4_background.png);
-  		background-repeat: repeat-x;
-  		background-color: #151521;
-  		line-height:1.5;
-  		font-family: Verdana, Arial, sans-serif;
-  		/*"Roboto"*/
-  	}
-  	.container {
-  		margin-top: 10%;
-  		margin-left: auto;
-  		margin-right: auto;
-      text-align: justify;
-  		height: 100%;
-  		width: 100%;
-  	}
-    .hiddenRow {
-      padding: 0 !important;
-    }
-	</style>
+	<title>Aurorastation Rules</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap -->
+	<link href="bootstrap.min.css" rel="stylesheet" media="screen">
+			<style media="screen">
+		.hiddenRow {
+			padding: 0 !important;
+		}
+			</style>
 </head>
 <body>
-  <div class="container">
-  	<div class="panel panel-default">
-      <nav>
-          <ul class="nav nav-tabs nav-justified">
-            <li role="presentation"><a href="index.html">Main Page</a></li>
-            <li role="presentation"><a href="https://forums.aurorastation.org">Forums</a></li>
-            <li role="presentation"><a href="https://wiki.aurorastation.org">Wiki</a></li>
-						<li role="presentation"><a href="https://byond.aurorastation.org">Web Interface</a></li>
-						<li role="presentation"><a href="#">Server Rules</a></li>
-						<li role="presentation"><a href="gdpr.html">GDPR/Data Notice</a></li>
-          </ul>
-  		</nav>
-			<div class="panel-body">
+	<style>
+		.table-hover-manual > tbody > tr:hover {
+			background-color: rgba(128, 128, 128, 0.2);
+		}
+	</style>
+	<div class="container-fluid">
+		<div class="panel-body">
 				<p>Please read <b>all</b> of these rules before joining the server. If you're not sure if something you're about to do is against the rules, <b>send an adminhelp (F1)</b> to ask for permission or clarification. Further more, if you have <b>any</b> questions, please <b>send an adminhelp (F1)</b> and ask a member of staff.</p>
 				<p>Note that these rules cannot cover the myriad of situations that will arise during gameplay. As such, the word of Moderators and Administrators ingame is final, and not up for debate past a certain point. If you take issue with an ingame ruling, you are expected to submit a staff complaint about it, or to contact a Head Administrator about it after the round has concluded.</p>
-		        <table class="table table-hover">
+		        <table class="table table-hover-manual">
 		          <tr data-toggle="collapse" data-target="#general" class="clickable">
 		            <th>General Rules</th>
 		          </tr>
@@ -93,7 +70,8 @@
 							<li>For characters whose criminal background is known to local authorities (they have been arrested for crimes in the past), it is recommended that you look for ways to incorporate the punishment given into the character’s roleplay and posting/activity on the station. A person convicted of murder, for example, would probably not even be hired, a character with a background of theft convictions would probably not be entrusted with higher positions, and so on.</li>
 						</ul>
 						<li><b>Your flavour text represents what can be visually observed observed by looking at your character</b>, and nothing else. Ridiculous flavour texts (such as "She is a 7'4'' amazon with rainbow hair, color-changing eyes, and sexy buttcheeks") will be asked to be curbed/reworked. Flavour text is also not a place to dump backstory elements. <a href="http://forums.aurorastation.org/viewtopic.php?f=23&t=1961">An official guide to flavourtext can be found here.</a></li>
-		              </ul>
+						<li>In regards to the renaming feature in the custom loadout: <b>do not add your character's name or surname when renaming items</b>. You can change the description to have an in character indication of who might be the owner of the item. <b>Do not rename any regular clothing item after department uniforms.</b></li>
+					  </ul>
 		              </div>
 		            </td>
 		          </tr>
@@ -114,7 +92,6 @@
 		                <li><b>Ask questions/ask for help</b> - if you wish to learn a new job, join as a character who is an intern/trainee, and ask to learn the job IC. If your character does not know how to perform a job, don't go and do it yourself anyway! Instead, request the assistance of a character who does.</li>
 		                <li><b>Take into account your character's comfort.</b> Wearing hardsuits or internals for a prolonged period of time would be very tiring or uncomfortable. Do not wear these items without good reason.</li>
 		                <li><b>Try to perform your job to a satisfactory standard,</b> especially in positions of power (security, head roles.) Minor failures at doing so will result in IC consequences, but constant, repeated failures without sense or reason can result in jobbans (NT would probably not hire your character if they were completely unable to do their job). Note that you are not expected to be a role model employee, but are asked to not use your job to grief and to also have an OOC understanding of what’s going on.</li>
-		                <li><b>Understand the effects of <a href="https://wiki.aurorastation.org/index.php?title=Cloning#Clone_memory_disorder">Clone Memory Disorder</a>.</b> If your character has been cloned, they do not know they are a clone unless informed or they can figure it out on their own. Upon being cloned, your character cannot remember, at the very least, the last 15 minutes before their death. The other side-effects are up to player discretion, as long as well roleplayed out. Being informed of having your character cloned should generally be a traumatic experience for the character!</li>
 		                <li><b>ERP, also known as Erotic RolePlay, is not allowed on the server.</b> While displays of romantic affection and romantic scenes are acceptable, scenes of a clearly sexual intent will be broken up. (Again, use common sense for this. Sexual tension up to a point is acceptable - sexual acts in themselves are not.)</li>
 						<li><b>Do not rules-lawyer your laws as an AI or any law-bound synthetic.</b> If the laws look solid and lack glaring mistakes, then please go along with them. It’s a form of validhunting/powergaming.</li>
 		              </ul>
@@ -132,13 +109,15 @@
 		              <li><b>Only escalate conflict in a realistic manner</b> - some characters might overreact, but you would not realistically go berserk or attempt to kill someone if they stole your prized pen, for instance. Again, your character must be motivated enough to commit to more drastic action, as they undertake it.</li>
 		              <li><b>Killing in self-defense in NOT preferred.</b> If possible, always try to flee, or disable your opponent. If your character does commit a murder in a canon setting, please roleplay out the effects it would have on your character as well.</li>
 		              <li><b>All events of conflict will be considered canon unless otherwise agreed upon by both parties or spurred by a round antagonist-related action.</b> Duty Officer involvement may result in a specific conflict being made canon regardless of player agreement, as seen fit. This still does not exempt you from rules on metagaming - your character does not acquire knowledge of syndicate items, xenos, etc. simply because they have interacted with them in previous rounds.</li>
-					  <li><b>Antagonist involvement can be incorporated</b> (does not have to be, however) <b>into a character’s canon, as long as the the antagonist’s names and actions are muddled to be believable, and to fall in line with the rules about powergaming.</b> Another condition is that you carry over any effects this would have in your characters, and manage them in a believable fashion. (Such as mental trauma, physical injuries, etcetera.) Do not use this as an excuse to develop an unrealistic character: keep in mind that traumatic events, such as being involved in firefights and high stress situations, will have a tangible effect on your character.</li>
-					  <li>Character deaths and antagonist actions are generally assumed to be non-canon, though this can be worked around if done sensibly.</li>
+					  <li><b>Antagonist involvement can be incorporated</b> (does not have to be, however) <b>into a character’s canon, as long as the the antagonist’s names and actions are muddled to be believable, and to fall in line with the rules about powergaming.</b> Another condition is that you carry over any effects this would have in your characters, and manage them in a believable fashion. (Such as mental trauma, physical injuries, etcetera.) Do not use this as an excuse to develop an unrealistic character: keep in mind that traumatic events, such as being involved in firefights and high stress situations, will have a tangible effect on your character. <b>This also includes away missions content.</b></li>
+					  <li>Character deaths and antagonist actions are generally assumed to be non-canon (<b>outside of canon rounds</b>), though this can be worked around if done sensibly.</li>
+					  <li>Happenings related to <b>canon events (canon rounds)</b>, usually ran by admins with the guidance of lore staff, are considered canon. The lore writer and the admin coordinating the event can make exceptions if permitted by the lore masters and the headmins. <b>In the case of character death</b> caused by the canon event, the death is considered canon and permanent unless the lore masters and headmins permit the player to decanonize the death.</li>
 		              <li><b>Metagrudging is not allowed.</b> Metagrudging is whenever your OOC opinions of a player or their character negatively affect your IC interactions with that character. Basing your IC interactions with a character on events rendered non-canon is also considered metagrudging.</li>
 		              <li><b>Taking IC issues into OOC chat,</b> specially if because one party was not happy with the outcome, in an unconstructive manner is rude, and not done in good spirit.<br>Remember, this is a game, we are here to enjoy ourselves. (See the "Don't be a dick" rule.)</li>
+					  <li><b>Crew characters must not be used as off-station antags, such as mercenaries, wizards, ninjas and heisters.</b> Exceptions can be made at the staff's discretion, but the presence of the character should add something to the overall story of the round.</li>
 		            </ul>
 		            <h3>On being an antagonist</h3>
-		            <p><b>Firstly, refer to <a href="https://wiki.aurorastation.org/index.php?title=Guides#Antagonist_Guides">Antagonist Guidelines</a> before attempting to play antagonist roles.</b></p>
+		            <p><b>When playing antagonist, adhere to the following guidelines.</b></p>
 		            <ul>
 		              <li><b>Being an antagonist does not exempt you from any server rules.</b> Being an antagonist is meant to give you easier access to character motivation with which to generate roleplay, and access to certain tools to assist with that as well.</li>
 		              <li><b>The primary goal of antangonists is to <u>DRIVE A STORY AND TO GENERATE INTERACTION</u>.</b> Be creative when coming up with objectives, and try to do things which will be fun for others, not only yourself. Do not resort to the bare minimums of generating a story through mechanical means, either. This means: no unmotivated/not roleplayed out mass murders, etcetera. See the rules below for further clarification.</li>
@@ -146,11 +125,11 @@
 		              <li><b>No ganking.</b> While antags will sometimes kill, it is expected for you to provide interesting roleplay to your targets first, if your goal is assassination. This does not mean that you need to monologue your opponent before killing them: roleplay leading up to a murder can take place over the course of the entire round, for example, leaving the murder scene itself to be “wordless”. Collateral damage is acceptable within reason, but this means you must use common sense, and avoid creating scenarios with a lot of potential for collateral (setting bombs in high-traffic areas, etc.)</li>
 		              <li><b>SSD/AFK characters are OFF-LIMITS.</b> Do not kill, maim, or steal from a character who is SSD. If a character goes SSD mid-roleplay, give them some time to rejoin before continuing, if applicable. If they do not come back, use judgement as to whether it is reasonable (and fair) to continue roleplay without them or not. It is acceptable to rob from SSDs if something on their person provides an item that is immediately vital to your character (helps keep the character alive). As necessary, you can ask for guidance via adminhelp.</li>
 		              <li><b>The station’s primary power source and atmospherics systems are generally off-limits in terms of catastrophic sabotage, due to the impact they can have on the round.</b> If you think you have a really good reason to mess with either, adminhelp first to get clearance.</li>
-									<li><b>Recalling a CT shuttle is not allowed as antag unless you get permission from staff first.</b></li>
+									<li><b>Recalling a transfer is not allowed as antag unless you get permission from staff first.</b></li>
 		            </ul>
 		            <h3>On playing with antagonists</h3>
 		            <ul>
-		              <li><b>Knowledge of the antagonists and Syndicate Items is restricted.</b> We expect players to allow traitors some leeway and as such have a list <a href="http://wiki.baystation12.net/index.php?title=Identifying_Antagonists">here</a> of who and what can be recgonized and by who. We expect players to not powergame and give the antagonists a little leeway to get away with things.</li>
+					  <li><b>Knowledge of the antagonists and Syndicate Items is restricted.</b> Only weapons and mundane objects would be recognised at first glance. We expect players to allow traitors some leeway. We expect players to not powergame and give the antagonists a little leeway to get away with things.</li>
 		              <li><b>Generally, avoid playing hero.</b> There are certain opportunities every character can seize to overthrow an antagonist, but going rambo on syndicate ops as a frail, unarmed medical doctor constitutes a failure to roleplay and will likely end with you getting shot. Also, if you are unarmed, and being held at gunpoint, it is generally expected for you to comply with your captor, or risk suffering the consequences. Specifically concerning melee combat: knowing advanced close quarters combat moves requires legitimate training, having it as a hobby or some such for a character who then uses this knowledge to expertly dislocate limbs will not fly. Unless trained, you should restrict yourself to standard punches, kicks, shoving, and grabbing/throwing.</li>
 		            </ul>
 		            </div>
@@ -230,7 +209,11 @@
 		        </tr>
 		        </table>
 		  		</div> <!-- panel-body -->
-  	</div> <!-- panel panel-default -->
-  </div> <!-- container -->
+		</div> <!-- container fluid -->
 </body>
+
+<script src="jquery-2.0.0.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="html5shiv.min.js"></script>
+<script src="respond.min.js"></script>
 </html>
